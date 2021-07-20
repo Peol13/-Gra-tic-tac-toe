@@ -31,6 +31,7 @@ border-radius: 5px;
 border: 2px solid gray;
 transition: all 0.05s linear;
 cursor: pointer;
+position: relative;
 }
 .wrapper{
 	display: flex;
@@ -51,4 +52,30 @@ cursor: pointer;
 }
 .board__item:hover{
 	background-color: #aaa;
+}
+.board__item--filled-X::after, .board__item--filled-X::before{
+	position: absolute;
+	content: "";
+	height: 5px;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	background-color: red;
+}
+.board__item--filled-X::before{	
+	transform: translateY(-50%) rotate(-45deg);
+}
+.board__item--filled-X::after{	
+	transform: translateY(-50%) rotate(45deg);
+}
+.board__item--filled-O::before {
+	position: absolute;
+	content: "";
+	border-radius: 50%;
+	border: 5px solid blue;
+	width: 80%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
