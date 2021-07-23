@@ -50,6 +50,17 @@ a:hover {
   font-size: 30px;
   font-weight: 700;
 }
+.current-player {
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+#current-player {
+  display: inline-block;
+  width: 30px;
+}
 
 .restart-button {
   margin-top: 20px;

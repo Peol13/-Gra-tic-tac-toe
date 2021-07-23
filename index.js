@@ -87,7 +87,9 @@ class Game {
       .getFieldForPositoin(position)
       .classList.add(`board__item--filled-${this.activePlayer}`);
     this.validateGame();
+
     this.activePlayer = this.activePlayer === "X" ? "O" : "X";
+    this.board.setCuttentPlayer(this.activePlayer);
   };
   setDefaults = (isAIsMove) => {
     this.fields = ["", "", "", "", "", "", "", "", ""];
@@ -102,6 +104,7 @@ class Board {
   panel = document.querySelector(".panel");
   button = document.querySelector(".restart-button");
   modeSelect = document.querySelector("#mode-select");
+  currentPlayer = document.querySelector("#current-player");
 
   constructor(onItemClick, onButtonClick, onModeChange) {
     this.onButtonClick = onButtonClick;
@@ -111,7 +114,11 @@ class Board {
       field.addEventListener("click", onItemClick);
     });
     this.modeSelect.addEventListener("change", onModeChange);
+    this.setCuttentPlayer("X");
   }
+  setCuttentPlayer = (player) => {
+    this.currentPlayer.innerText = player;
+  };
   handleButtonClick = () => {
     this.resetBoard();
     this.onButtonClick();
@@ -119,6 +126,7 @@ class Board {
   resetBoard = () => {
     this.resetBoardClasses();
     this.clearMessage();
+    this.setCuttentPlayer("X");
   };
   resetBoardClasses = () => {
     this.fieldsElements.forEach((field) => {
