@@ -43,7 +43,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .panel {
   height: 50px;
