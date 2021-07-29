@@ -1,105 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+main {
+  text-align: center;
 }
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
-
-a:link {
-  color: #209781;
-  text-decoration: none;
-}
-a:visited {
-  color: #209781;
-}
-a:active {
-  color: #209781;
-}
-a:hover {
-  color: #e9b64a;
-}
-
-.board {
+.game-grid {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  grid-gap: 10px;
-  padding: 10px;
-  border: 2px solid gray;
-  border-radius: 5px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  width: 380px;
+  margin: 30px auto;
 }
-.board__item {
-  background-color: lightgray;
-  border-radius: 5px;
-  border: 2px solid gray;
-  transition: all 0.05s linear;
+.cell {
   cursor: pointer;
-  position: relative;
-}
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-.panel {
-  height: 50px;
-  font-size: 30px;
-  font-weight: 700;
-}
-.current-player {
-  font-size: 30px;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-}
-
-#current-player {
-  display: inline-block;
-  width: 30px;
-}
-
-.restart-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 2px solid gray;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.05s linear;
-}
-.restart-button:hover {
-  background-color: #ddd;
-}
-.board__item:hover {
-  background-color: #aaa;
-}
-.board__item--filled-X::after,
-.board__item--filled-X::before {
-  position: absolute;
-  content: "";
-  height: 5px;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  background-color: red;
-}
-.board__item--filled-X::before {
-  transform: translateY(-50%) rotate(-45deg);
-}
-.board__item--filled-X::after {
-  transform: translateY(-50%) rotate(45deg);
-}
-.board__item--filled-O::before {
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  border: 5px solid blue;
-  width: 80%;
-  height: 80%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 110px;
+  text-align: center;
+  border: 1px solid black;
+  width: 120px;
+  height: 120px;
 }

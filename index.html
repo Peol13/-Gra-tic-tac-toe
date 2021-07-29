@@ -13,31 +13,25 @@
     <![endif]-->
   </head>
   <body>
-    <select id="mode-select">
-      <option value="pvp">pvp</option>
-      <option value="easy">easy</option>
-      <option value="medium">medium</option>
-    </select>
-    <p class="current-player">
-      <span>Kolej gracza:</span>
-      <span id="current-player"></span>
-    </p>
-    <div class="wrapper">
-      <p class="panel"></p>
-      <div class="board">
-        <div class="board__item" data-pos="0"></div>
-        <div class="board__item" data-pos="1"></div>
-        <div class="board__item" data-pos="2"></div>
-        <div class="board__item" data-pos="3"></div>
-        <div class="board__item" data-pos="4"></div>
-        <div class="board__item" data-pos="5"></div>
-        <div class="board__item" data-pos="6"></div>
-        <div class="board__item" data-pos="7"></div>
-        <div class="board__item" data-pos="8"></div>
-      </div>
-      <button class="restart-button">Restart</button>
-    </div>
-
+   <main>
+     
+       <button class="pvp">PVP</button>
+       <button class="easy">EASY</button>
+     
+     <h3>Kółko i Krzyżyk <span id ="winner"></span></h3>
+     <div class="game-grid">
+       <div class="cell" data-index="0"></div>
+       <div class="cell" data-index="1"></div>
+       <div class="cell" data-index="2"></div>
+       <div class="cell" data-index="3"></div>
+       <div class="cell" data-index="4"></div>
+       <div class="cell" data-index="5"></div>
+       <div class="cell" data-index="6"></div>
+       <div class="cell" data-index="7"></div>
+       <div class="cell" data-index="8"></div>
+     </div>
+     <button id="restart-game">Restart gry</button#>
+   </main>
     <script src="index.js"></script>
   </body>
 </html>
