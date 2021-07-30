@@ -55,7 +55,6 @@ class App {
   }
 
   AITurn() {
-    this.checkWinner();
     let SetNr = Math.floor(Math.random() * 9);
     let AddInCellSetNr = document.querySelector(
       `[data-index="${SetNr}"]`
@@ -104,9 +103,12 @@ class App {
         a !== b &&
         b !== c
       ) {
+        console.log("remnis");
         this.setWinner(" - Remis");
       }
       if (a == b && b == c) {
+        this.currentPlayer = "X";
+        console.log("Wygreał");
         this.setWinner(" - zwyciężył: " + a);
       }
     }
