@@ -103,12 +103,10 @@ class App {
         a !== b &&
         b !== c
       ) {
-        console.log("remnis");
         this.setWinner(" - Remis");
       }
       if (a == b && b == c) {
         this.currentPlayer = "X";
-        console.log("Wygreał");
         this.setWinner(" - zwyciężył: " + a);
       }
     }
