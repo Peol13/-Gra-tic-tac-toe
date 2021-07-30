@@ -90,10 +90,6 @@ class App {
       const c = this.getCellValue(variant[2]);
 
       if (a == "" || b == "" || c == "") continue;
-      if (a == b && b == c) {
-        this.setWinner(" - zwyciężył: " + a);
-      }
-
       if (
         this.cell1.innerHTML !== "" &&
         this.cell2.innerHTML !== "" &&
@@ -109,6 +105,11 @@ class App {
       ) {
         this.setWinner(" - Remis");
       }
+      if (a == b && b == c) {
+        this.setWinner(" - zwyciężył: " + a);
+      }
+
+     
     }
   }
 
